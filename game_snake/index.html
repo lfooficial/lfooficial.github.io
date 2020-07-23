@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Snake Game</title>
+</head>
+
+<body>
+
+    <div id="jogo">
+        <div id="titulo">
+            <h1>Jogo da Cobrinha</h1>
+            <p><strong>Desenvolvedor: </strong> @lfooficial</p>
+        </div>
+        <div id="painel">
+            <div class="painel-item">
+                <p id="ponto">Pontos: </p>
+                <span id="span-ponto"></span>
+            </div>
+            <hr />
+            <div class="painel-item">
+                <p id="nivel">Nível: </p>
+                <span id="span-nivel"></span>
+            </div>
+            <hr />
+            <div class="painel-item">
+                <p id="ponto-maximo">Ponto Máximo: </p>
+                <span id="span-ponto-maximo"></span>
+            </div>
+        </div>
+        <div id="tela-do-jogo">
+            <canvas id="snake" width="400" height="400"></canvas>
+            <div id="mensagem">
+                <p class="texto-da-mensagem">Digite no teclado uma das teclas </p>
+                <div id="teclas">
+                    <div class="tecla-item">&uarr;</div>
+                    <div class="tecla-item">&rarr;</div>
+                    <div class="tecla-item">&darr;</div>
+                    <div class="tecla-item">&larr;</div>
+                </div>
+                <p class="texto-da-mensagem">para Começar</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="jogo.js"></script>
+</body>
+
+</html>
