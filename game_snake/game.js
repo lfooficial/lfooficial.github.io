@@ -403,16 +403,49 @@ let Snake = (function () {
 Snake.config()
 Snake.start(2)
 
-let ajax = new XMLHttpRequest()
-ajax.overrideMimeType("application/json")
-ajax.open("GET", "/dados.json")
-ajax.send(null)
-ajax.addEventListener('readystatechange', function(){
 
-})
+// Função para capturar eventos
+function capturaEventos(obj, evt, fn) {
+	// Verifica se o objeto suporta addEventListener
+	if(obj.addEventListener){
+		obj.addEventListener(evt, fn, true);
+	} 
+	// Adiociona attachEvent da Microsoft
+	else {
+		var evento = 'on' + evt;
+		obj.attachEvent(evento, fn);
+	}
+}
 
-/* var mydata = JSON.parse(data);
-console.log(mydata[0]) */
+/* let data = JSON.parse("dados.json")
+console.log(data)
+ */
+var a = 12;
+var b = 3;
 
+var obj = {
+ c: 11,
+ d:22
+}
 
+Object.defineProperty(obj, "a", {
+  get: function () { return a; },
+  set: function (value) { a = value; },
+  enumerable: true
+});
 
+Object.defineProperty(obj, "b", {
+  get: function () { return b; },
+  set: function (value) { b = value; },
+  enumerable: true
+});
+
+console.log(JSON.stringify(obj));
+
+a = 17;
+
+console.log(JSON.stringify(obj));
+
+obj.a = 12;
+
+console.log(a);
