@@ -5,7 +5,7 @@
     overflow: hidden;
 }
 
-#jogo {
+#game {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -16,7 +16,7 @@
     position: relative;
 }
 
-#titulo {
+#title {
     width: 80vw;
     display: flex;
     flex-direction: column;
@@ -25,12 +25,12 @@
     border-bottom: 0.5px solid var(--cor-da-borda);
     margin-bottom: 10px;
 }
-#titulo h1{
+#title h1{
     font-size: 50px;
     padding: 5px;
 }
 
-#titulo p{
+#title p{
     font-size: 20px;
     width: 100%;
     padding: 5px;
@@ -50,19 +50,19 @@
     margin: 0 5px;
 }
 
-#tela-do-jogo, #snake{
+#screen-game, #snake{
     width: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
-    
+    position: relative; 
 }
-#tela-do-jogo {
+
+#screen-game {
     border: 0.5px solid var(--cor-da-borda);
 }
 
-#mensagem{
+#sms{
     width: 100%;
     height: 100%;
     display: flex;
@@ -74,16 +74,16 @@
     left: 0;
 }
 
-.texto-da-mensagem{
+.text-sms{
     font-size: 14px;
 }
 
-#teclas{
+#keys{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.tecla-item{
+.key-item{
     width: 30px;
     height: 30px;
     margin: 2px;
@@ -104,7 +104,7 @@
 }
 
 @media(max-width: 500px){
-    #titulo, #painel, #tela-do-jogo, #cobra, #controle{
+    #title, #painel, #screen-game, #snake{
         width: 100vw;
     }
 }

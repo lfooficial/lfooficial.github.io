@@ -172,6 +172,11 @@ let Snake = (function () {
 
                 if (snake[0].dx == food.dx && snake[0].dy == food.dy) {
                     game.generateRandomFood()
+
+                    for(let i = 0; i < snake.length; i++){
+                        if(snake[i].dx == food.dx && snake[i].dy == food.dy) game.generateRandomFood()
+                    }
+                    
                     points++
                     if (points > pointsMax) pointsMax = points
                     for (let i = 0; i < 50; i += 5) {
@@ -319,27 +324,27 @@ let Snake = (function () {
                     }
                 }
 
-                let sms = document.getElementById('mensagem')
+                let sms = document.getElementById('sms')
                 sms.style.display = 'none'
             } else {
                 if (loser) {
-                    let sms = document.getElementById('mensagem')
+                    let sms = document.getElementById('sms')
                     sms.style.display = 'none'
                 } else {
-                    let sms = document.getElementById('mensagem')
+                    let sms = document.getElementById('sms')
                     sms.style.display = 'flex'
                 }
             }
 
-            let placar = document.getElementById('span-ponto')
+            let placar = document.getElementById('span-point')
             let textPlacar = points
             placar.innerHTML = textPlacar
 
-            let placarlevel = document.getElementById('span-nivel')
+            let placarlevel = document.getElementById('span-level')
             let textPlacarLevel = level
             placarlevel.innerHTML = textPlacarLevel
 
-            let placarMaximo = document.getElementById('span-ponto-maximo')
+            let placarMaximo = document.getElementById('span-point-max')
             let textPlacarMaximo = pointsMax
             placarMaximo.innerHTML = textPlacarMaximo
         }
@@ -397,3 +402,17 @@ let Snake = (function () {
 
 Snake.config()
 Snake.start(2)
+
+let ajax = new XMLHttpRequest()
+ajax.overrideMimeType("application/json")
+ajax.open("GET", "/dados.json")
+ajax.send(null)
+ajax.addEventListener('readystatechange', function(){
+
+})
+
+/* var mydata = JSON.parse(data);
+console.log(mydata[0]) */
+
+
+

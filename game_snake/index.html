@@ -4,49 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="style.css">
     <title>Snake Game</title>
 </head>
 
 <body>
 
-    <div id="jogo">
-        <div id="titulo">
+    <div id="game">
+        <div id="title">
             <h1>Jogo da Cobrinha</h1>
             <p><strong>Desenvolvedor: </strong> @lfooficial</p>
         </div>
         <div id="painel">
             <div class="painel-item">
-                <p id="ponto">Pontos: </p>
-                <span id="span-ponto"></span>
+                <p id="point">Pontos: </p>
+                <span id="span-point"></span>
             </div>
             <hr />
             <div class="painel-item">
-                <p id="nivel">Nível: </p>
-                <span id="span-nivel"></span>
+                <p id="level">Nível: </p>
+                <span id="span-level"></span>
             </div>
             <hr />
             <div class="painel-item">
-                <p id="ponto-maximo">Ponto Máximo: </p>
-                <span id="span-ponto-maximo"></span>
+                <p id="point-max">Ponto Máximo: </p>
+                <span id="span-point-max"></span>
             </div>
         </div>
-        <div id="tela-do-jogo">
+        <div id="screen-game">
             <canvas id="snake" width="400" height="400"></canvas>
-            <div id="mensagem">
-                <p class="texto-da-mensagem">Digite no teclado uma das teclas </p>
-                <div id="teclas">
-                    <div class="tecla-item">&uarr;</div>
-                    <div class="tecla-item">&rarr;</div>
-                    <div class="tecla-item">&darr;</div>
-                    <div class="tecla-item">&larr;</div>
+            <div id="sms">
+                <p class="text-sms">Digite no teclado uma das teclas </p>
+                <div id="keys">
+                    <div class="key-item">&uarr;</div>
+                    <div class="key-item">&rarr;</div>
+                    <div class="key-item">&darr;</div>
+                    <div class="key-item">&larr;</div>
                 </div>
-                <p class="texto-da-mensagem">para Começar</p>
+                <p class="text-sms">para Começar</p>
             </div>
         </div>
     </div>
 
-    <script type="text/javascript" src="jogo.js"></script>
+    <script type="text/javascript" src="data.json"></script>
+    <script type="text/javascript" src="game.js"></script>
 </body>
 
 </html>
