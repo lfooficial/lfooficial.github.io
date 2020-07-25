@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/*logo*/
+
+@import url('https://fonts.googleapis.com/css2?family=Dhurjati&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+body {
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100%;
+    background: var(--site);
+    display: flex;
+    justify-content: center;
+    color: var(--white);
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    list-style: none;
+    text-decoration: none;
+}
+
+button {
+    color: var(--white);
+    background: none;
+    padding: 0;
+}
+
+#page {
+    width: 90vw;
+    height: 100vh;
+}
+
+#header {
+    width: 100%;
+}
+
+#logo {
+    padding-bottom: 10px;
+}
+
+#logo p {
+    font-family: 'Dhurjati', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+
+/* Content */
+
+#content,
+#dev {
+    width: 90vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.devs {
+    width: 27vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    border-right: 1px solid var(--white);
+}
+
+.devs+.devs {
+    border-left: 1px solid var(--white);
+}
+
+.devs:last-child {
+    border-right: unset;
+}
+
+.dev-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.btn-more1 {
+    width: 7vw;
+    height: 7vw;
+    margin-top: 2px;
+    display: none;
+    font-size: 5vw;
+    text-align: center;
+    border: 0.5px solid var(--white);
+}
+
+.about {
+    width: 100%;
+    background: whitesmoke;
+    color: var(--black);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.acess {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--black);
+}
+
+.acess p {
+    font-weight: 700;
+}
+
+.acess a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--white);
+    padding: 2px 4px;
+    margin: 2px;
+    background: red;
+    border: 0.1px solid var(--black);
+    border-radius: 6px;
+}
+
+@media(max-width: 700px) {
+    #dev {
+        flex-direction: column;
+    }
+    .devs {
+        width: 90vw;
+        border-left: none;
+        border-right: none;
+    }
+    .devs+.devs {
+        border-left: none;
+    }
+    .dev-header {
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+    .btn-more1 {
+        display: inline;
+    }
+}
+
+
+/* /Content */
+
+:root {
+    --site: rgb(1, 29, 31);
+    --white: rgb(234, 232, 248);
+    --black: #000;
+}
