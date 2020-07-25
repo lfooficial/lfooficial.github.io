@@ -61,12 +61,13 @@ button {
 }
 
 .devs {
-    width: 27vw;
+    width: 30vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: center;
     border-right: 1px solid var(--white);
+    border-bottom: 1px solid gray;
 }
 
 .devs+.devs {
@@ -84,14 +85,22 @@ button {
     justify-content: space-around;
 }
 
-.btn-more1 {
+.btn {
     width: 7vw;
     height: 7vw;
-    margin-top: 2px;
+    margin: 2px;
     display: none;
     font-size: 5vw;
     text-align: center;
     border: 0.5px solid var(--white);
+    border-radius: 5px;
+}
+
+#dev-content1,
+#dev-content2,
+#dev-content3 {
+    width: 100%;
+    display: flex;
 }
 
 .about {
@@ -140,8 +149,21 @@ button {
         justify-content: space-between;
         padding: 0 10px;
     }
-    .btn-more1 {
+    #dev-content1,
+    #dev-content2,
+    #dev-content3 {
+        width: 100%;
+        display: none;
+    }
+    #btnAdd1,
+    #btnAdd2,
+    #btnAdd3 {
         display: inline;
+    }
+    #btnRemove1,
+    #btnRemove2,
+    #btnRemove3 {
+        display: none;
     }
 }
 
